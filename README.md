@@ -24,7 +24,6 @@ Este é um projeto pessoal desenvolvido com o objetivo de aprimorar conhecimento
 - 🛒 **Carrinho de Compras**: Gerenciamento de itens, quantidades e cálculo de totais
 - 💳 **Checkout**: Fluxo completo de finalização de compra
 - 👤 **Autenticação**: Login e registro de usuários
-- 📱 **Design Responsivo**: Interface adaptável para desktop, tablet e mobile
 
 ## 🚀 Tecnologias Utilizadas
 
