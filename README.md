@@ -312,12 +312,12 @@ Este é um projeto pessoal desenvolvido para fins educacionais.
 
 **Samuel**
 
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [Seu Nome](https://linkedin.com/in/seu-perfil)
+- GitHub: github.com/Samucalaf
+- LinkedIn: linkedin.com/in/samuel-lafuente/
 
 ---
 
-⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
+⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!  
 
 ```sh
 npm run lint
