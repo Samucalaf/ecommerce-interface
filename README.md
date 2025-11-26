@@ -89,19 +89,44 @@ Este é um projeto pessoal desenvolvido com o objetivo de aprimorar conhecimento
 ecommerce-interface/
 ├── public/                  # Arquivos estáticos públicos
 ├── src/
-│   ├── assets/             # Imagens, ícones, fontes
-│   ├── components/         # Componentes Vue reutilizáveis
-│   │   ├── common/        # Componentes genéricos (Button, Input, Card)
-│   │   ├── layout/        # Layout (Header, Footer, Sidebar)
-│   │   ├── product/       # Componentes de produto
-│   │   └── cart/          # Componentes do carrinho
-│   ├── composables/       # Composition functions reutilizáveis
-│   ├── router/            # Configuração de rotas
+│   ├── assets/             # Imagens, ícones, estilos
+│   │   ├── icons/         # Ícones e SVGs
+│   │   ├── images/        # Imagens da aplicação
+│   │   └── styles/        # Estilos globais (Tailwind)
+│   ├── router/            # Configuração de rotas Vue Router
+│   ├── services/          # Serviços de API (Axios)
+│   │   ├── api.ts         # Configuração base do Axios
+│   │   ├── authService.ts # Serviços de autenticação
+│   │   ├── categoryService.ts # Serviços de categorias
+│   │   ├── orderService.ts # Serviços de pedidos
+│   │   ├── productService.ts # Serviços de produtos
+│   │   └── userService.ts # Serviços de usuário
 │   ├── stores/            # Stores Pinia (estado global)
-│   ├── services/          # Serviços de API
+│   │   ├── auth.ts        # Store de autenticação
+│   │   ├── cart.ts        # Store do carrinho
+│   │   ├── category.ts    # Store de categorias
+│   │   ├── orders.ts      # Store de pedidos
+│   │   └── products.ts    # Store de produtos
 │   ├── types/             # Definições TypeScript
-│   ├── utils/             # Funções utilitárias
+│   │   ├── Auth.ts        # Tipos de autenticação
+│   │   ├── Cart.ts        # Tipos do carrinho
+│   │   ├── Category.ts    # Tipos de categoria
+│   │   ├── Order.ts       # Tipos de pedido
+│   │   ├── Product.ts     # Tipos de produto
+│   │   ├── User.ts        # Tipos de usuário
+│   │   └── index.ts       # Export centralizado
 │   ├── views/             # Componentes de página/rota
+│   │   ├── CartView.vue   # Página do carrinho
+│   │   ├── CategoriesView.vue # Página de categorias
+│   │   ├── CheckoutView.vue # Página de checkout
+│   │   ├── HomeView.vue   # Página inicial
+│   │   ├── LoginView.vue  # Página de login
+│   │   ├── OrdersView.vue # Página de pedidos
+│   │   ├── ProductDetailView.vue # Detalhes do produto
+│   │   ├── ProductListView.vue # Lista de produtos
+│   │   ├── ProfileView.vue # Página de perfil
+│   │   └── RegisterView.vue # Página de registro
+│   ├── __tests__/         # Testes unitários
 │   ├── App.vue            # Componente raiz
 │   └── main.ts            # Entry point da aplicação
 ├── docker-compose.yml      # Configuração Docker Compose

@@ -28,14 +28,13 @@ Este documento organiza o desenvolvimento do projeto em **sprints de 7 dias** se
 **Descrição:** Criar toda a estrutura de diretórios e arquivos de configuração necessários para o projeto.
 
 **Critérios de Aceite:**
-- [ ] Criar pasta `src/components/` com subpastas: `common/`, `layout/`, `product/`, `cart/`
-- [ ] Criar pasta `src/views/` com páginas: `Home.vue`, `ProductList.vue`, `ProductDetail.vue`, `Cart.vue`, `Checkout.vue`, `Login.vue`, `Register.vue`
-- [ ] Criar pasta `src/services/` com arquivo `api.ts` (configuração Axios)
-- [ ] Criar pasta `src/types/` com interfaces TypeScript
-- [ ] Criar pasta `src/composables/` para lógica reutilizável
-- [ ] Criar pasta `src/utils/` para funções auxiliares
-- [ ] Criar pasta `src/constants/` para configurações
-- [ ] Criar arquivo `.env.example` com variáveis de ambiente
+- [x] Criar pasta `src/views/` com todas as páginas necessárias
+- [x] Criar pasta `src/services/` com serviços de API
+- [x] Criar pasta `src/stores/` com stores Pinia
+- [x] Criar pasta `src/types/` com interfaces TypeScript
+- [x] Criar pasta `src/router/` com configuração de rotas
+- [x] Criar pasta `src/assets/` com subpastas (icons, images, styles)
+- [x] Estrutura base do projeto criada e funcional
 
 ---
 
@@ -43,13 +42,11 @@ Este documento organiza o desenvolvimento do projeto em **sprints de 7 dias** se
 **Descrição:** Implementar configuração centralizada do Axios para comunicação com a API backend.
 
 **Critérios de Aceite:**
-- [ ] Instalar Axios: `npm install axios`
-- [ ] Criar `src/services/api.ts` com instância configurada do Axios
-- [ ] Configurar baseURL a partir de variável de ambiente `VITE_API_URL`
-- [ ] Implementar interceptor de requisição para incluir token de autenticação
-- [ ] Implementar interceptor de resposta para tratamento de erros globais
-- [ ] Criar função de tratamento de erros HTTP (401, 403, 404, 500)
-- [ ] Adicionar timeout padrão de 10 segundos
+- [x] Instalar Axios: `npm install axios`
+- [x] Criar `src/services/api.ts` com instância configurada do Axios
+- [x] Configurar baseURL a partir de variável de ambiente `VITE_API_URL`
+- [x] Todos os services criados (auth, product, user, order, category)
+- [x] Estrutura pronta para implementação de lógica
 
 ---
 
@@ -57,13 +54,13 @@ Este documento organiza o desenvolvimento do projeto em **sprints de 7 dias** se
 **Descrição:** Definir todas as interfaces e tipos TypeScript para o projeto.
 
 **Critérios de Aceite:**
-- [ ] Criar `src/types/Product.ts` com interface `Product`
-- [ ] Criar `src/types/User.ts` com interface `User`
-- [ ] Criar `src/types/Cart.ts` com interfaces `CartItem` e `Cart`
-- [ ] Criar `src/types/Order.ts` com interface `Order`
-- [ ] Criar `src/types/Category.ts` com interface `Category`
-- [ ] Criar `src/types/Auth.ts` com interfaces `LoginRequest`, `RegisterRequest`, `AuthResponse`
-- [ ] Criar `src/types/ApiResponse.ts` para padronizar respostas da API
+- [x] Criar `src/types/Product.ts` com interface `Product`
+- [x] Criar `src/types/User.ts` com interface `User`
+- [x] Criar `src/types/Cart.ts` com interfaces `CartItem` e `Cart`
+- [x] Criar `src/types/Order.ts` com interface `Order`
+- [x] Criar `src/types/Category.ts` com interface `Category`
+- [x] Criar `src/types/Auth.ts` com tipos de autenticação
+- [x] Criar `src/types/index.ts` para export centralizado
 
 ---
 
@@ -71,13 +68,14 @@ Este documento organiza o desenvolvimento do projeto em **sprints de 7 dias** se
 **Descrição:** Criar stores para gerenciamento de estado global da aplicação.
 
 **Critérios de Aceite:**
-- [ ] Criar `src/stores/auth.ts` para autenticação e dados do usuário
-- [ ] Criar `src/stores/products.ts` para produtos
-- [ ] Criar `src/stores/cart.ts` para carrinho de compras
-- [ ] Criar `src/stores/orders.ts` para pedidos
-- [ ] Implementar persistência do token no localStorage na store auth
+- [x] Criar `src/stores/auth.ts` para autenticação e dados do usuário
+- [x] Criar `src/stores/products.ts` para produtos
+- [x] Criar `src/stores/cart.ts` para carrinho de compras
+- [x] Criar `src/stores/orders.ts` para pedidos
+- [x] Criar `src/stores/category.ts` para categorias
+- [ ] Implementar lógica completa em cada store
+- [ ] Implementar persistência do token no localStorage
 - [ ] Implementar persistência do carrinho no localStorage
-- [ ] Adicionar getters para cálculo de totais e estatísticas
 
 ---
 
@@ -85,16 +83,18 @@ Este documento organiza o desenvolvimento do projeto em **sprints de 7 dias** se
 **Descrição:** Definir todas as rotas da aplicação e implementar guards de autenticação.
 
 **Critérios de Aceite:**
-- [ ] Definir rota `/` para Home
-- [ ] Definir rota `/products` para lista de produtos
-- [ ] Definir rota `/product/:id` para detalhes do produto
-- [ ] Definir rota `/cart` para carrinho
-- [ ] Definir rota `/checkout` para finalização de compra
-- [ ] Definir rota `/login` para login
-- [ ] Definir rota `/register` para registro
-- [ ] Definir rota `/profile` para perfil do usuário (protegida)
-- [ ] Implementar guard de autenticação para rotas protegidas
-- [ ] Implementar redirecionamento de usuários logados tentando acessar login/register
+- [x] Definir rota `/` para Home
+- [x] Definir rota `/products` para lista de produtos
+- [x] Definir rota `/product/:id` para detalhes do produto
+- [x] Definir rota `/cart` para carrinho
+- [x] Definir rota `/checkout` para finalização de compra
+- [x] Definir rota `/login` para login
+- [x] Definir rota `/register` para registro
+- [x] Definir rota `/profile` para perfil do usuário
+- [x] Definir rota `/orders` para histórico de pedidos
+- [x] Definir rota `/categories` para navegação por categorias
+- [x] Estrutura de rotas configurada com meta fields
+- [ ] Implementar guards de autenticação funcionais
 
 ---
 
